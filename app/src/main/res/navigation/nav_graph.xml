@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/firstLocationFragment">
+    <fragment
+        android:id="@+id/firstLocationFragment"
+        android:name="com.example.navigation_from_scratch.FirstLocationFragment"
+        android:label="fragment_first_location"
+        tools:layout="@layout/fragment_first_location" >
+        <action
+            android:id="@+id/action_firstLocationFragment_to_secondLocationFragment"
+            app:destination="@id/secondLocationFragment" />
+        <action
+            android:id="@+id/action_firstLocationFragment_to_thirdLocationFragment"
+            app:destination="@id/thirdLocationFragment" />
+        <action
+            android:id="@+id/action_firstLocationFragment_to_ultimateDestinationFragment"
+            app:destination="@id/ultimateDestinationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondLocationFragment"
+        android:name="com.example.navigation_from_scratch.SecondLocationFragment"
+        android:label="fragment_second_location"
+        tools:layout="@layout/fragment_second_location" >
+        <action
+            android:id="@+id/action_secondLocationFragment_to_thirdLocationFragment"
+            app:destination="@id/thirdLocationFragment" />
+        <action
+            android:id="@+id/action_secondLocationFragment_to_firstLocationFragment"
+            app:destination="@id/firstLocationFragment" />
+        <action
+            android:id="@+id/action_secondLocationFragment_to_ultimateDestinationFragment"
+            app:destination="@id/ultimateDestinationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/thirdLocationFragment"
+        android:name="com.example.navigation_from_scratch.ThirdLocationFragment"
+        android:label="fragment_third_location"
+        tools:layout="@layout/fragment_third_location" >
+        <action
+            android:id="@+id/action_thirdLocationFragment_to_secondLocationFragment"
+            app:destination="@id/secondLocationFragment" />
+        <action
+            android:id="@+id/action_thirdLocationFragment_to_firstLocationFragment"
+            app:destination="@id/firstLocationFragment" />
+        <action
+            android:id="@+id/action_thirdLocationFragment_to_ultimateDestinationFragment"
+            app:destination="@id/ultimateDestinationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ultimateDestinationFragment"
+        android:name="com.example.navigation_from_scratch.UltimateDestinationFragment"
+        android:label="fragment_ultimate_destination"
+        tools:layout="@layout/fragment_ultimate_destination" >
+        <action
+            android:id="@+id/action_ultimateDestinationFragment_to_thirdLocationFragment"
+            app:destination="@id/thirdLocationFragment" />
+        <action
+            android:id="@+id/action_ultimateDestinationFragment_to_secondLocationFragment"
+            app:destination="@id/secondLocationFragment" />
+        <action
+            android:id="@+id/action_ultimateDestinationFragment_to_firstLocationFragment"
+            app:destination="@id/firstLocationFragment" />
+    </fragment>
+</navigation>
